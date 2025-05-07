@@ -124,6 +124,9 @@ validate_url() {
 
 # 主逻辑：安装和启动 Aztec 节点
 install_and_start_node() {
+
+  curl -fsSL https://get.docker.com | sh
+  sudo usermod -aG docker $USER
   # 安装依赖
   install_docker
   install_docker_compose
